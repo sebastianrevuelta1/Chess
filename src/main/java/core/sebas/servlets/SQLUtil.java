@@ -11,4 +11,9 @@ public class SQLUtil {
 		sqlStatement.setString(2, password);
         return sqlStatement;
     }
+
+    public static String buildQuery(String username, String password) {
+        String query = "select * from user where username='" + username + "' and password = '" + password + "'";
+	return query;
+    }
 }
